@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard"; // dùng card đẹp
 import { getBlockchainContract } from "../../contracts/contract";
-
+import { formatEther } from "ethers";
 const ProductSection = () => {
   const [products, setProducts] = useState([]);
 
@@ -17,7 +17,7 @@ const ProductSection = () => {
         id: Number(ids[i]),
         name,
         batch: batches[i],
-        price: Number(prices[i]),
+        price: Number(formatEther(prices[i])), // ✅ formatEther trực tiếp
         stage: Number(stages[i]),
         owner: owners[i],
         description: `Batch: ${batches[i]} | Owner: ${owners[i].slice(

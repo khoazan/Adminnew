@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import contractABI from "./PharmaSupply.json"; // <-- file .json bạn gửi sang
 
 // 💡 Dán địa chỉ contract thật của bạn ở đây
-const contractAddress = "0x109bf4E2Ed90e9Bd7efd0D24558e8850fb037d2E";
+const contractAddress = "0x9F069170F197f0200a523d36773F5d7791e55095";
 
 export const getBlockchainContract = async () => {
   if (!window.ethereum) {
